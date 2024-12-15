@@ -16,7 +16,7 @@ export default function Layout() {
             {/* Renderiza el componente Outlet para mostrar el contenido de las demás paginas. Ten en cuenta que el contenido de las demás paginas se inyecta en el Outlet */}
 
             {/* Una buena practica es que el elemento main sirve para agrupar el contenido principal */}
-            <main>
+            <main className="container mx-auto py-16">
                 <Outlet />
             </main>
         </>

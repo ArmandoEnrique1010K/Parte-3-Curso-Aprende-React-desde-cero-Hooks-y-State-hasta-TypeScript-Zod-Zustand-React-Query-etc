@@ -1,42 +1,26 @@
-import { ChangeEvent, FormEvent, useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { useAppStore } from "../stores/useAppStore";
 
 export default function Header() {
 
-    const [searchFilters, setSearchFilters] = useState({
-        ingredient: '',
-        category: ''
-    })
-
     const { pathname } = useLocation();
     const isHome = useMemo(() => pathname === '/', [pathname])
 
+    // Llama a la acción de fetchCategories en el store
     const fetchCategories = useAppStore((state) => state.fetchCategories)
-    const categories = useAppStore((state) => state.categories)
-    const searchRecipes = useAppStore((state) => state.searchRecipes)
 
+    // Llama al state de categories
+    const categories = useAppStore((state) => state.categories)
+
+    // Imprime las categorias
+    console.log(categories)
+
+    // Llama a la función fetchCategories cuando se renderice este componente
     useEffect(() => {
         fetchCategories()
     }, [])
 
-    const handleChange = (e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLSelectElement>) => {
-        setSearchFilters({
-            ...searchFilters,
-            [e.target.name]: e.target.value
-        })
-    }
-
-    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-        e.preventDefault()
-
-        if (Object.values(searchFilters).includes('')) {
-            console.log('Todos los campos son obligatorios')
-            return
-        }
-
-        searchRecipes(searchFilters)
-    }
 
     return (
         <header className={isHome ? 'bg-header bg-center bg-cover' : 'bg-slate-800'}>
@@ -68,7 +52,6 @@ export default function Header() {
                     isHome && (
                         <form
                             className="md:w-1/2 2xl:w-1/3 bg-orange-400 my-32 p-10 rounded-lg shadow space-y-6"
-                            onSubmit={handleSubmit}
                         >
                             <div className="space-y-4">
                                 <label
@@ -84,9 +67,6 @@ export default function Header() {
                                     name="ingredient"
                                     className="p-3 w-full rounded-lg focus:outline-none"
                                     placeholder="Nombre o Ingrediente. Ej. Vodka, Tequila, Café"
-                                    onChange={handleChange}
-                                    value={searchFilters.ingredient}
-
                                 />
                             </div>
 
@@ -102,15 +82,14 @@ export default function Header() {
                                     id="category"
                                     name="category"
                                     className="p-3 w-full rounded-lg focus:outline-none"
-                                    onChange={handleChange}
-                                    value={searchFilters.category}
-
                                 >
                                     <option value="">-- Seleccione --</option>
                                     {
+                                        // Itera con el state de categories
                                         categories.drinks.map(
                                             category => (
                                                 <option
+                                                    // Como solamente tiene una propiedad, se utiliza solamente su valor por cada categoria
                                                     value={category.strCategory}
                                                     key={category.strCategory}
                                                 >{category.strCategory} </option>
