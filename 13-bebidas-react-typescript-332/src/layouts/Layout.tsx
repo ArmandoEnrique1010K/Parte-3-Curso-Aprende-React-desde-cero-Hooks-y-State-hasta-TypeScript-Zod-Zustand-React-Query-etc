@@ -12,6 +12,7 @@ export default function Layout() {
                 <Outlet />
             </main>
 
+            {/* Renderiza aqui la ventana modal */}
             <Modal />
         </>
     )
