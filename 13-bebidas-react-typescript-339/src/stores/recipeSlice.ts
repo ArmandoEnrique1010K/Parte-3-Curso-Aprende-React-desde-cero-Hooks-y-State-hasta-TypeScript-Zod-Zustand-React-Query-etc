@@ -1,6 +1,7 @@
 import { StateCreator } from "zustand"
 import { getCategories, getRecipeById, getRecipes } from "../services/RecipeService"
 import type { Categories, Drink, Drinks, Recipe, SearchFilter } from "../types"
+import { FavoritesSliceType } from "./favoritesSlice"
 
 export type RecipesSliceType = {
     categories: Categories
@@ -13,7 +14,12 @@ export type RecipesSliceType = {
     closeModal: () => void
 }
 
-export const createRecipeSlice: StateCreator<RecipesSliceType> = (set) => ({
+// export const createRecipeSlice: StateCreator<RecipesSliceType> = (set) => ({
+
+// Si este slice se utiliza en favoritesSlice se realiza los siguientes cambios: en el type actual se coloca un operador & y luego el segundo slice, 2 arreglos vacios (indican que no van a mutar ni esperan parametros adicionales) y luego nuevamente el type para este Slice
+
+// Se realiza el mismo procedimiento de forma inversa en el favoriteSlice
+export const createRecipeSlice: StateCreator<RecipesSliceType & FavoritesSliceType, [], [], RecipesSliceType> = (set) => ({
     categories: {
         drinks: []
     },
