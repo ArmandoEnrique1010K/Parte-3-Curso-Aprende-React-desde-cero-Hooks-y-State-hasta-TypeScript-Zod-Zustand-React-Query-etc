@@ -1,0 +1,22 @@
+{
+  "name": "14_rest_api_node",
+  "version": "1.0.0",
+  "description": "REST API's con Express y TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --exec ts-node src/index.ts"
+  },
+  "author": "Juan De la torre @codigoconjuan",
+  "license": "ISC",
+  "dependencies": {
+    "14_rest_api_node": "file:",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}

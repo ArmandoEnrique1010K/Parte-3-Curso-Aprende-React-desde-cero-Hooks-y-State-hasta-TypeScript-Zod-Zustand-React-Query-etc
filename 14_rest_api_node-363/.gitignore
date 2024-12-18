@@ -1,0 +1,8 @@
+# Carpeta de librerias instaladas
+node_modules/
+
+# Carpeta de deploy del proyecto
+dist/
+
+# Archivos de variables de entorno
+.env

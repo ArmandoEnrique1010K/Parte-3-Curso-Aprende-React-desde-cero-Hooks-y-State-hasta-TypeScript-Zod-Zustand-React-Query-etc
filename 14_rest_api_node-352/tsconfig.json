@@ -1,0 +1,28 @@
+{
+    // Configuraciones para el compilador
+    "compilerOptions": {
+        // Ubicación de la carpeta donde se guardara el proyecto compilado
+        "outDir": "./dist",
+
+        // Directorio principal o raiz del proyecto
+        "rootDir": "./src",
+
+        // Versión de JavaScript a la que se compilara
+        "lib": ["ESNext"],
+
+        // Se recomienda dejarlo como false, si esta en true no permite utilizar un "any" en el codigo
+        "strict": false,
+
+        // Genera los archivos map, util cuando se trabaja con debugger
+        "sourceMap": true,
+
+        // Permite importar las librerias que estan escritas en common.js para el proyecto (solamente si lo estas utilizando)
+        "esModuleInterop": true,
+
+        // Genera los archivos de definición (similar a un type)
+        "declaration": true
+    },
+
+    // Lista de archivos que se incluiran, en este caso se define todos los archivos de typescript definidos en src
+    "include": ["src/**/*.ts"]
+}

@@ -1,0 +1,137 @@
+
+REST API's
+
+¿Qué es una REST API?
+
+Es un conjunto de reglas que permiten que aplicaciones se comuniquen entre sí a través de la web.
+
+REST = Representational State Transfer
+
+Puede ser diseñada en cualquier lenguaje
+
+Debe responder a los Request HTTP: GET, POST, PUT, PATCH, DELETE
+
+Tiene una forma ordenada y estructurada de poner a disposición los recursos de una base de datos
+
+
+Verbos HTTP
+
+GET - Obtener datos
+POST - Enviar datos / Creación
+PUT/PATCH - Actualización
+DELETE - Eliminar
+
+Endpoints de una REST API
+
+Una REST API cuanta con Endpoints (o Urls) para hacer operaciones CRUD
+
+Listar todos los clientes  ---  GET  ---  /clientes
+Obtener un solo cliente  ---  GET  ---  /clientes/10
+Crear un nuevo cliente  ---  POST  ---  /clientes
+Editar un cliente  ---  PUT  ---  /clientes/10
+Borrar un cliente  ---  DELETE  ---  /clientes/8
+
+
+Ventajas de una REST API
+
+Simplicidad de creación
+
+Es una forma escalable y ordenadad de crear un proyecto
+
+Facilidad de uso y se pueden consumir en React, Angular, Vue.js, Flutter, Kotlin, Swift, etc.
+
+
+Herramientas para crear REST API's
+
+Cualquier lenguaje de programación que se ejecute en el servidor puede servir para crear una REST API: Python, PHP, Java, C#, etc.
+
+Muchos frameworks soportan la creación de REST API's y simplifican mucho este proceso entre ellos Laravel, Express, Rails o Django.
+
+Una base de datos como MySQL, PostgreSQL o MongoDB
+
+
+PERN STACK
+
+Son las iniciales de PostgreSQL - Express - React - Node.js
+
+Un stack es un conjunto de herramientas para crear una app
+
+Full Stack quiere decir que puedes crear el Stack completo de una App y PERN Stack te permite hacerlo
+
+React en el Front End y Node en el backend son una combinación muy común
+
+Puedes utilizar React con Backends de Django, Rails o Laravel
+
+
+POSTGRESQL
+
+Tambien llamado Postgres, es un sistema de gestión de bases de datos relacional orientado a objetos y de código abierto
+
+Para interactuar con nuestra base de datos podemos hacerlo por medio de un ORM.
+
+Un ORM tiene todos los métodos para crear, obtener, actualizar y eliminar datos de nuestra base de datos
+
+
+EXPRESS
+
+Infraestructura web rápida, minimalista y flexible para Node.js
+
+A diferencia de Rails o Laravel no tiene un sistema de vistas definido, tampoco ORM o Autenticacion; sino que te deja mucha parte de la configuración en tus manos
+
+Ideal para utilizarse en Aplicaciones web monoliticas o como API
+
+
+NODE.JS
+
+Entorno de ejecución en JavaScript que se ejecuta en el servidor
+
+Entre sus ventajas se encuentra la gran cantidad de librerías disponibles para integrarlas en proyectos con NPM
+
+Puede consultar base de datos, autenticar usuarios, manejar rutas y mucho más
+
+
+Ventajas de PERN o MERN
+
+Separación de backend y frontend
+
+Comunicación entre backend y frontend con JSON y peticiones HTTP
+
+NPM con una gran cantidad de dependencias
+
+Solo codigo de JavaScript/TypeScript para crear aplicaciones Full Stack
+
+
+
+Creando el proyecto, 
+
+Para crear una REST API que se conectara a la base de datos para crear los registros
+
+primero crea una carpeta de forma manual para el proyecto "13_rest_api_node"
+
+Abre una terminal powershell e introduce los comandos:
+
+cd <<Ruta hacia la carpeta "13_rest_api_node">>
+
+npm init
+
+Ese ultimo comando sirve para generar el archivo "package.json", no hay un estandar para express, pide algunas configuraciones:
+
+13_rest_api_node <-- Nombre del paquete
+1.0.0 <-- Version
+REST API's con Express y TypeScript <-- Descripción
+index.js <-- Punto de entrada
+
+Pulsa 3 veces enter en las opciones test command, git repository y keywords
+
+Juan De la torre @codigoconjuan <-- Nombre del autor
+
+Pulsa Enter para generar el archivo package.json
+
+
+
+
+
+
+
+
+
