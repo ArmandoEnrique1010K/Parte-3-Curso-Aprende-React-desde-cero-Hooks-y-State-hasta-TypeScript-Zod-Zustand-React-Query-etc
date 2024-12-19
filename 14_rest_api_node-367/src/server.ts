@@ -20,7 +20,12 @@ async function connectDB() {
 
 connectDB()
 
+// Instancia de express
 const server = express();
+
+// Leer datos de formulario
+// use se utiliza en todos los request, express.json habilita la lectura de JSON, por lo cual puedes enviar un objeto JSON a una URL de tipo POST
+server.use(express.json())
 
 server.use('/api/products', router)
 

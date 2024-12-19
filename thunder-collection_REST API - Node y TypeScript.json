@@ -1,0 +1,88 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "REST API - Node y TypeScript",
+    "collectionId": "e48d2cba-9715-462e-9bc9-57b1cd7337f4",
+    "dateExported": "2024-12-19T03:28:07.435Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "4985da4e-8a9e-4f98-b333-ecb243e3ea20",
+            "colId": "e48d2cba-9715-462e-9bc9-57b1cd7337f4",
+            "containerId": "",
+            "name": "POST - Crear Producto",
+            "url": "http://localhost:4000/api/products",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-12-18T05:10:40.488Z",
+            "modified": "2024-12-18T05:10:40.488Z",
+            "headers": []
+        },
+        {
+            "_id": "bcb4ea8a-9893-45ee-922d-9f6c024982cc",
+            "colId": "e48d2cba-9715-462e-9bc9-57b1cd7337f4",
+            "containerId": "",
+            "name": "GET - Obtener Productos",
+            "url": "http://localhost:4000/api/products",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-12-19T01:52:51.008Z",
+            "modified": "2024-12-19T01:56:38.273Z",
+            "headers": []
+        },
+        {
+            "_id": "c16ce444-1e7c-4494-9f7f-eb258d9a8f5e",
+            "colId": "e48d2cba-9715-462e-9bc9-57b1cd7337f4",
+            "containerId": "",
+            "name": "Obtener Producto por ID",
+            "url": "http://localhost:4000/api/products/1",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-12-19T02:12:58.126Z",
+            "modified": "2024-12-19T02:24:05.842Z",
+            "headers": []
+        },
+        {
+            "_id": "3c39d033-9430-4e53-9f38-e7065f72d1fd",
+            "colId": "e48d2cba-9715-462e-9bc9-57b1cd7337f4",
+            "containerId": "",
+            "name": "PUT - Actualizar Producto",
+            "url": "http://localhost:4000/api/products/1",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-12-19T02:37:14.164Z",
+            "modified": "2024-12-19T03:00:16.270Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Monitor Nuevo - Actualizado\",\n  \"price\": 400,\n  \"availability\": true\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "bdaba66a-dbe7-4fc7-8069-d918bbe58232",
+            "colId": "e48d2cba-9715-462e-9bc9-57b1cd7337f4",
+            "containerId": "",
+            "name": "PATCH - Actualizar disponibilidad",
+            "url": "http://localhost:4000/api/products/1",
+            "method": "PATCH",
+            "sortNum": 60000,
+            "created": "2024-12-19T03:03:40.754Z",
+            "modified": "2024-12-19T03:18:32.157Z",
+            "headers": []
+        },
+        {
+            "_id": "ea1aa7d7-79d0-4a14-bf71-a206ba52e438",
+            "colId": "e48d2cba-9715-462e-9bc9-57b1cd7337f4",
+            "containerId": "",
+            "name": "DELETE - Borrar producto",
+            "url": "http://localhost:4000/api/products/6",
+            "method": "DELETE",
+            "sortNum": 70000,
+            "created": "2024-12-19T03:23:40.826Z",
+            "modified": "2024-12-19T03:25:22.641Z",
+            "headers": []
+        }
+    ],
+    "ref": "H6Ng3cPMJS5RVkoNMCVGSwjn1-gwD4xD6tIWnnRT9ANokuXg57SDv9d1I50GkHo81www7blyC1n3x5S_5webjg"
+}
