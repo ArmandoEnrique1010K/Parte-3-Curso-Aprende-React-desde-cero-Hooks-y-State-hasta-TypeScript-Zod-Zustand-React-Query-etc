@@ -12,7 +12,8 @@ class Product extends Model {
     declare name: string
 
     @Column({
-        type: DataType.FLOAT(6, 2)
+        // Como PostgreSQL no soporta la sintaxis, se deja como un FLOAT sin argumentos
+        type: DataType.FLOAT
     })
     declare price: number
 

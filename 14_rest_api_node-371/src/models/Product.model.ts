@@ -6,7 +6,7 @@ import { Table, Column, Model, DataType, Default } from 'sequelize-typescript'
 
 class Product extends Model {
     @Column({
-        type: DataType.CHAR(100)
+        type: DataType.STRING(100)
     })
 
     // Coloca "declare" antes del nombre del campo
