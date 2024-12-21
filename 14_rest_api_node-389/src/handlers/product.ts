@@ -2,10 +2,23 @@ import { Request, Response } from "express"
 import Product from "../models/Product.model";
 
 export const createProduct = async (req: Request, res: Response) => {
+    // Elimina el bloque try-catch y reemplazalo por el contenido del bloque try. Repite el mismo procedimiento en las demás funciones
     const product = await Product.create(req.body)
     res.status(201).json({
         data: product
     })
+
+    /*
+    try {
+        const product = await Product.create(req.body)
+        res.status(201).json({
+            data: product
+        })
+    } catch (error) {
+        console.log(error)
+    }
+    */
+
 }
 
 export const getProducts = async (req: Request, res: Response) => {
@@ -23,6 +36,25 @@ export const getProducts = async (req: Request, res: Response) => {
         data: products
     })
 
+    /*
+    try {
+        const products = await Product.findAll({
+            order: [
+                ['id', 'DESC']
+            ],
+
+            attributes: {
+                exclude: ['createdAt', 'updatedAt', 'availability']
+            }
+        });
+
+        res.json({
+            data: products
+        })
+    } catch (error) {
+        console.log(error)
+    }
+        */
 }
 
 export const getProductById = async (req: Request, res: Response) => {
@@ -41,6 +73,26 @@ export const getProductById = async (req: Request, res: Response) => {
         data: product
     })
 
+    /*
+    try {
+        const { id } = req.params
+        const product = await Product.findByPk(id)
+
+        if (!product) {
+            res.status(404).json({
+                error: "Producto No Encontrado"
+            })
+
+            return
+        }
+
+        res.json({
+            data: product
+        })
+    } catch (error) {
+        console.log(error)
+    }
+        */
 }
 
 export const updateProduct = async (req: Request, res: Response) => {
